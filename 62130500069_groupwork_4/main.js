@@ -67,7 +67,7 @@ const app = {
         this.members[index].imgdefault = this.members[index].img;
       },
       toggleCancel() {
-        this.inputSearch = "";
+        this.inputkey = "";
         this.isHidden = !this.isHidden;
       },
       closeImg() {
