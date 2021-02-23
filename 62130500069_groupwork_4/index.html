@@ -70,15 +70,15 @@
 
     </div>
 
-<!-- display content session -->
+    <!-- display content session -->
     <div class="grid grid-cols-4 gap-2">
       <div class="container d-flex justify-content-center" v-if="searching.length !== 0"
         v-for="(member,index) in searching" :key="index">
         <div class="card p-3">
           <div class="media">
 
-            <img v-bind:src="member.imgdefault" @mouseover="hoverimg(index)" @mouseout="unhover(index)" @click="toggleImg(member.id)"
-              class="mr-3 w-1/2">
+            <img v-bind:src="member.imgdefault" @mouseover="hoverimg(index)" @mouseout="unhover(index)"
+              @click="toggleImg(member.id)" class="mr-3 w-1/2">
             <div class="media-body">
               <h5 class="mt-2 mb-0">{{member.mbname}}</h5>
               <div class="grid grid-cols-2 gap-6 ">
@@ -90,7 +90,7 @@
                     src='./images/baseline_favorite_border_black_36dp.png'></span>
                 <span v-show=member.like @click="toggleLike(member.id)"><img
                     src='./images/baseline_favorite_black_36dp.png'></span>
-               
+
               </div>
             </div>
 
@@ -99,7 +99,8 @@
       </div>
       <!-- no result session -->
       <div v-else class="mt-10  shadow-lg rounded w-full mx-auto px-auto py-5 flex justify-center">
-        <h2 class="mb-2 text-2xl font-bold text-gray-800 bg-gray-200 bg-opacity-75">no result of <span class=" text-pink-600">{{inputkey}}</span> </h2>
+        <h2 class="mb-2 text-2xl font-bold text-gray-800 bg-gray-200 bg-opacity-75">no result of <span
+            class=" text-pink-600">{{inputkey}}</span> </h2>
       </div>
 
 
@@ -118,7 +119,7 @@
         <img :src="viewImg " class="m-6 border border-4 border-white lg:h-5/6">
       </div>
     </div>
-
+</div>
     <!-- my main.js -->
     <script src="main.js"></script>
 </body>
